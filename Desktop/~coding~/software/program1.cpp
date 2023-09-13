@@ -56,6 +56,13 @@ int main()
     cout << "Sum of array: " << sumArray(arr, size) << endl;
     cout << "Product of array: " << productArray(arr,size) << endl;
     
+    int* reverse = reverseArray(arr, size);
+
+    cout << "Reversed Array: " << endl;
+    for (int i = 0; i < size; i++) {
+        cout << reverse[i] << " ";
+    }
+
 
     return 0;
 }
