@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 
+//method that calculates the sum of all ints in given array
 int sumArray(int arr[], int size)
 {
     int sum = 0;
@@ -13,6 +14,7 @@ int sumArray(int arr[], int size)
     return sum;
 }
 
+//method that calculates the product of all ints in given array
 int productArray(int arr[], int size)
 {
     int product = 0;
@@ -42,18 +44,20 @@ int main()
 {
     int size;
     
+    //prompt user
     cout << "How many numbers would you like to input?" << endl;
     cin >> size;
     int arr[size];
 
-
+    //prompt user
     cout << "Input your numbers" << endl;
     for (int i = 0; i < size; i ++)
     {
-        cin >> arr[i];
+        cin >> arr[i]; //take in numbers from user and put in array
     }
 
-    cout << "Sum of array: " << sumArray(arr, size) << endl;
+    //print output
+    cout << "Sum of array: " << sumArray(arr, size) << endl; 
     cout << "Product of array: " << productArray(arr,size) << endl;
     
     int* reverse = reverseArray(arr, size);
