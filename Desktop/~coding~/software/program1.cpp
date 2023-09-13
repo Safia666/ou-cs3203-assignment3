@@ -25,6 +25,19 @@ int productArray(int arr[], int size)
     return product;
 }
 
+
+// Function to reverse an array of integers and return a pointer to the reversed array
+int* reverseArray(int arr[], int size) {
+
+    int* reverse = new int[size]; // Create a new dynamic array
+
+    for (int i = 0; i < size; i++) 
+        reverse[i] = arr[size - 1 - i]; // Reverse the elements
+    
+
+    return reverse;
+}
+
 int main()
 {
     int size;
@@ -42,6 +55,14 @@ int main()
 
     cout << "Sum of array: " << sumArray(arr, size) << endl;
     cout << "Product of array: " << productArray(arr,size) << endl;
+    
+    int* reverse = reverseArray(arr, size);
+
+    cout << "Reversed Array: " << endl;
+    for (int i = 0; i < size; i++) {
+        cout << reverse[i] << " ";
+    }
+
 
     return 0;
 }
