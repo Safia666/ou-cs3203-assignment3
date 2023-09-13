@@ -13,5 +13,16 @@ int sumArray(int arr[], int size)
     return sum;
 }
 
+int productArray(int arr[], int size)
+{
+    int product = 0;
+    for(int i = 0; i < size; i++)
+    {
+       product *= arr[i];
+    }
+    return product;
+}
+
+
 
 
